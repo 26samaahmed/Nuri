@@ -103,4 +103,3 @@ struct LoginSignupView: View {
 #Preview {
     LoginSignupView()
 }
-
