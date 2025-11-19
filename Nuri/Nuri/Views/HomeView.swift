@@ -52,6 +52,7 @@ struct HomeView: View {
                     .padding(.top, 50)
                 
                 Spacer()
+                NavbarView()
             }
         }
     }
