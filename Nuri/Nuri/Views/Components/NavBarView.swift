@@ -8,19 +8,34 @@
 import SwiftUI
 
 
-struct NavbarView: View {
+struct NavBarView: View {
     var body: some View {
-        HStack {
-                Image(systemName: "house.fill").foregroundColor(.white).font(.system(size: 30))
-                Spacer()
-                Image(systemName: "camera.fill").foregroundColor(.white).font(.system(size: 30))
-                Spacer()
-                Image(systemName: "person.circle.fill").foregroundColor(.white).font(.system(size: 30))
-                Spacer()
-                Image(systemName: "bookmark.fill").foregroundColor(.white).font(.system(size: 30))
-                Spacer()
+        HStack(spacing: 65) {
+            VStack{
+                Image("Home Icon")
+                Text("Home").foregroundColor(.white).font(.custom("Anuphan", size:12))
+            }
+            
+            VStack{
+                Image("Camera Icon")
+                Text("Scan").foregroundColor(.white).font(.custom("Anuphan", size:12))
+            }
+            
+            VStack{
+                Image("Profile Icon")
+                Text("Profile").foregroundColor(.white).font(.custom("Anuphan", size:12))
+            }
+            
+            VStack{
+                Image("Bookmark Icon")
+                Text("Saved").foregroundColor(.white).font(.custom("Anuphan", size:12))
+            }
         }
-        .padding(.top, 10)
+        .font(.system(size: 40))
+        .foregroundColor(.white)
+        .padding(.vertical, 12)
+        .frame(maxWidth: .infinity)
         .background(Color(red: 127/255, green:96/255, blue: 112/255))
+        .ignoresSafeArea(edges: .bottom)
     }
 }
