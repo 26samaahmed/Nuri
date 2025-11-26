@@ -37,15 +37,19 @@ struct SettingsView: View {
 
                         SettingsCard {
                             SettingRow(label: "Full Name", value: "John Doe")
+                            
                             Rectangle().fill(Color.white.opacity(0.38)).frame(height: 1).frame(maxWidth: .infinity)
                             SettingRow(label: "Email Address", value: "johndoe@icloud.com")
+                            
                             Rectangle().fill(Color.white.opacity(0.38)).frame(height: 1).frame(maxWidth: .infinity)
 
                             HStack {
                                 Text("Password")
                                     .font(.custom("Anuphan", size: 17))
                                     .foregroundColor(Color(red: 105/255, green: 101/255, blue: 193/255))
+                                
                                 Spacer()
+                                
                                 SecureField("••••••••", text: $password)
                                     .font(.custom("Anuphan", size: 17))
                                     .foregroundColor(Color(red: 105/255, green: 101/255, blue: 193/255))
@@ -67,8 +71,10 @@ struct SettingsView: View {
                                     .font(.custom("Anuphan", size: 17))
                                     .foregroundColor(Color(red: 105/255, green: 101/255, blue: 193/255))
                                     .toggleStyle(SwitchToggleStyle(tint: Color(red: 127/255, green:96/255, blue: 112/255)))
+                                
                                 Spacer()
                             }
+                            
                             Rectangle().fill(Color.white.opacity(0.38)).frame(height: 1).frame(maxWidth: .infinity)
 
                             HStack {
@@ -76,11 +82,13 @@ struct SettingsView: View {
                                     .font(.custom("Anuphan", size: 17))
                                     .foregroundColor(Color(red: 105/255, green: 101/255, blue: 193/255))
                                     .toggleStyle(SwitchToggleStyle(tint: Color(red: 127/255, green:96/255, blue: 112/255)))
+                                
                                 Spacer()
                             }
                         }
 
                         Spacer()
+                        
                         Text("System")
                             .font(.custom("Anuphan", size: 20))
                             .foregroundColor(Color(red: 127/255, green:96/255, blue: 112/255))
@@ -89,9 +97,13 @@ struct SettingsView: View {
 
                         SettingsCard {
                             SettingRow(label: "Language", value: "English")
+                            
                             Rectangle().fill(Color.white.opacity(0.38)).frame(height: 1).frame(maxWidth: .infinity)
+                            
                             SettingRow(label: "Region", value: "North America")
+                            
                             Rectangle().fill(Color.white.opacity(0.38)).frame(height: 1).frame(maxWidth: .infinity)
+                            
                             SettingRow(label: "App Version", value: "1.0")
                         }
                     }
@@ -135,7 +147,9 @@ struct SettingRow: View {
             Text(label)
                 .font(.custom("Anuphan", size: 15))
                 .foregroundColor(Color(red: 105/255, green: 101/255, blue: 193/255))
+            
             Spacer()
+            
             Text(value)
                 .font(.custom("Anuphan", size: 15))
                 .foregroundColor(Color(red: 105/255, green: 101/255, blue: 193/255))
