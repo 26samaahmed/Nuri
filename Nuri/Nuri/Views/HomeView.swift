@@ -52,6 +52,8 @@ struct HomeView: View {
                             .foregroundColor(Color(red: 105/255, green:101/255, blue: 193/255))
                             .font(.custom("Anuphan", size: 20)).frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
+                        
+                        // Need to add the logic where all the recently searched products are displayed
 
                         Spacer().frame(height: 40)
                     }

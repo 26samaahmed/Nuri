@@ -29,11 +29,19 @@ struct SettingsView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20).padding(.bottom, 7)
 
-                        Text("Account")
-                            .font(.custom("Anuphan", size: 20))
-                            .foregroundColor(Color(red: 127/255, green:96/255, blue: 112/255))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 20)
+                        HStack{
+                            Text("Account")
+                                .font(.custom("Anuphan", size: 20))
+                                .foregroundColor(Color(red: 127/255, green:96/255, blue: 112/255))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 20)
+                            
+                            Text("Update").font(.custom("Anuphan", size: 15))
+                                .foregroundColor(Color(red: 127/255, green:96/255, blue: 112/255))
+                                .frame(maxWidth: .infinity, alignment: .trailing).padding(.horizontal, 20)
+                            
+                            // Need to change this update text to a button where the user can edit their information. Need to get data from login/sign up page
+                        }
 
                         SettingsCard {
                             SettingRow(label: "Full Name", value: "John Doe")

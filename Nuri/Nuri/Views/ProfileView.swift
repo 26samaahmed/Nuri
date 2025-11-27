@@ -26,9 +26,13 @@ struct ProfileView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20).padding(.bottom, 7)
                         
-                        Text("Skin Type").foregroundColor(Color(red: 91/255, green:36/255, blue: 122/255))
-                            .font(.custom("Anuphan", size: 20)).frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 20)
+                        HStack{
+                            Text("Skin Type").foregroundColor(Color(red: 91/255, green:36/255, blue: 122/255))
+                                .font(.custom("Anuphan", size: 20)).frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 20)
+                            
+                            // Need to add button for user to click and update the preferences they set when creating the acccount
+                        }
                         
                         
                         Rectangle().fill(Color(red: 154/255, green:152/255, blue: 216/255).opacity(0.52)).frame(height: 2).frame(maxWidth: 350)
@@ -37,11 +41,15 @@ struct ProfileView: View {
                             .font(.custom("Anuphan", size: 20)).frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
                         
+                        // Need to fetch the data saved from when the user chose their preferred ingredients then style it
+                        
                         Rectangle().fill(Color(red: 154/255, green:152/255, blue: 216/255).opacity(0.52)).frame(height: 2).frame(maxWidth: 350)
                         
                         Text("Avoidable Ingredients").foregroundColor(Color(red: 91/255, green:36/255, blue: 122/255))
                             .font(.custom("Anuphan", size: 20)).frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
+                        
+                        // Need to fetch the data saved from when the user chose their avoidable ingredients then style it
                         
                     }
                     .padding(.top, 20) // Space below top bar

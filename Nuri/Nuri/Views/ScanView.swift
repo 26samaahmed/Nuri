@@ -19,7 +19,7 @@ struct ScanView: View {
                 TopBarView()
                 ScrollView {
                     VStack(spacing: 30) {
-
+                        // Need to add qr/barcode scanner logic
                     }
                     .padding(.top, 20) // Space below top bar
                 }
