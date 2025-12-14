@@ -1,12 +1,12 @@
 //
-//  SignIn.swift
+//  GetStartedView.swift
 //  Nuri
 //
 //  Created by Josephine Choi on 12/13/25.
 //
 import SwiftUI
 
-struct SignInView: View {
+struct GetStartedView: View {
     @State private var firstName: String = ""
     @State private var lastName: String = ""
     @State private var email: String = ""
@@ -32,7 +32,7 @@ struct SignInView: View {
                     
                     // Title
                     HStack {
-                        Text("Welcome back!")
+                        Text("Create Account")
                             .font(.custom("Anuphan", size: 28))
                             .foregroundColor(Color(red: 91/255, green: 36/255, blue: 122/255))
                             .fontWeight(.bold)
@@ -45,35 +45,29 @@ struct SignInView: View {
                     
                     // Form Fields
                     VStack(spacing: 20) {
+                        FloatingTextField(label: "First Name", text: $firstName)
                         
-                        FloatingTxtField(label: "Email", text: $email)
+                        FloatingTextField(label: "Last Name", text: $lastName)
                         
-                        FloatingSecField(label: "Password", text: $password)
+                        FloatingTextField(label: "Email", text: $email)
                         
-                        VStack(spacing: 1) {
-                            Text("We've missed you!")
-                                .font(.custom("Anuphan", size: 16))
-                                .foregroundColor(Color(red: 91/255, green: 36/255, blue: 122/255))
-                                .multilineTextAlignment(.center)
-                            
-                            Text("Let's light up your skincare journey! 😊✨")
-                                .font(.custom("Anuphan", size: 16))
-                                .foregroundColor(Color(red: 91/255, green: 36/255, blue: 122/255))
-                                .multilineTextAlignment(.center)
-                        }
+                        FloatingSecureField(label: "Password", text: $password)
+                        
+                        FloatingSecureField(label: "Confirm password", text: $confirmPassword)
                     }
                     .padding(.horizontal, 40)
                     
-//                    Spacer()
-//                        .frame(height: 5)
+                    Spacer()
+                        .frame(height: 40)
                     
+                    // Create Button
                     Button(action: {
                     }) {
-                        Text("Sign In")
+                        Text("Create")
                             .font(.custom("MergeOne-Regular", size: 30))
                             .foregroundColor(.white)
                             .frame(width: 220, height: 55)
-                            .background(Color(red: 154/255, green: 152/255, blue: 216/255))
+                            .background(Color(red: 91/255, green: 36/255, blue: 122/255))
                             .cornerRadius(27.5)
                     }
                     
@@ -85,7 +79,7 @@ struct SignInView: View {
 }
 
 // Floating TextField Component
-struct FloatingTxtField: View {
+struct FloatingTextField: View {
     let label: String
     @Binding var text: String
     @FocusState private var isFocused: Bool
@@ -121,7 +115,7 @@ struct FloatingTxtField: View {
 }
 
 // Floating SecureField Component
-struct FloatingSecField: View {
+struct FloatingSecureField: View {
     let label: String
     @Binding var text: String
     @FocusState private var isFocused: Bool
@@ -157,5 +151,5 @@ struct FloatingSecField: View {
 }
 
 #Preview {
-    SignInView()
+    GetStartedView()
 }
