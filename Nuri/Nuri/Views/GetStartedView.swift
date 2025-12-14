@@ -2,7 +2,7 @@
 //  GetStartedView.swift
 //  Nuri
 //
-//  Created by Josephine Choi on 12/5/25.
+//  Created by Josephine Choi on 12/13/25.
 //
 import SwiftUI
 
